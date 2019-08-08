@@ -7,17 +7,34 @@
 }
 
 @each $name, $colors in $nusmods-theme-colors {
-  .theme-#{$name},
-  // Specificity override for the theme settings page
-  .theme-option.theme-#{$name} {
-    $index: 0;
+  @if (str-index($name, '-dark')) {
+    $sliced-name: str-slice($name, 1, -6);
+    .theme-#{$sliced-name}.mode-dark,
+    // Specificity override for the theme settings page
+    .theme-option.theme-#{$sliced-name}.mode-dark {
+      $index: 0;
 
-    @each $color in $colors {
-      .color-#{$index} {
-        @include color($color);
+      @each $color in $colors {
+        .color-#{$index} {
+          @include color($color);
+        }
+
+        $index: $index + 1; /* stylelint-disable-line order/order */
       }
+    }
+  } @else {
+    .theme-#{$name}:not(.mode-dark),
+    // Specificity override for the theme settings page
+    .theme-option.theme-#{$name}:not(.mode-dark) {
+      $index: 0;
 
-      $index: $index + 1; /* stylelint-disable-line order/order */
+      @each $color in $colors {
+        .color-#{$index} {
+          @include color($color);
+        }
+
+        $index: $index + 1; /* stylelint-disable-line order/order */
+      }
     }
   }
 }

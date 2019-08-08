@@ -189,6 +189,7 @@ class SettingsContainer extends React.Component<Props, State> {
               theme={theme}
               isSelected={currentThemeId === theme.id}
               onSelectTheme={this.props.selectTheme}
+              mode={this.props.mode}
             />
           ))}
         </div>

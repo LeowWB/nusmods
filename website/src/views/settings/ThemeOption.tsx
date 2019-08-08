@@ -1,4 +1,4 @@
-import { Theme, ThemeId } from 'types/settings';
+import { Theme, ThemeId, Mode } from 'types/settings';
 
 import * as React from 'react';
 import { range } from 'lodash';
@@ -12,15 +12,16 @@ type Props = {
   isSelected: boolean;
   onSelectTheme: (themeId: ThemeId) => void;
   className?: string;
+  mode?: Mode;
 };
 
 export default function ThemeOption(props: Props) {
-  const { theme, isSelected, onSelectTheme, className } = props;
+  const { theme, isSelected, onSelectTheme, className, mode } = props;
 
   return (
     <button
       type="button"
-      className={classnames(className, styles.option, `theme-${theme.id}`, {
+      className={classnames(className, styles.option, `theme-${theme.id}, ${mode == 'LIGHT' ? '' : 'mode-dark,'}`, {
         [styles.isSelected]: isSelected,
       })}
       onClick={() => onSelectTheme(theme.id)}
