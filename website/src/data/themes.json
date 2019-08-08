@@ -1,50 +1,50 @@
 [
   {
-    "id": "ashes",
-    "name": " Ashes"
+    "id": "american",
+    "name": "American"
   },
   {
-    "id": "chalk",
-    "name": "Chalk"
+    "id": "aussie",
+    "name": "Aussie"
   },
   {
-    "id": "eighties",
-    "name": "Eighties"
+    "id": "british",
+    "name": "British"
   },
   {
-    "id": "google",
-    "name": "Google"
+    "id": "canadian",
+    "name": "Canadian"
   },
   {
-    "id": "mocha",
-    "name": "Mocha"
+    "id": "chinese",
+    "name": "Chinese"
   },
   {
-    "id": "monokai",
-    "name": "Monokai"
+    "id": "dutch",
+    "name": "Dutch"
   },
   {
-    "id": "ocean",
-    "name": "Ocean"
+    "id": "french",
+    "name": "French"
   },
   {
-    "id": "oceanic-next",
-    "name": "Oceanic Next"
+    "id": "german",
+    "name": "German"
   },
   {
-    "id": "paraiso",
-    "name": "Paraiso"
+    "id": "indian",
+    "name": "Indian"
   },
   {
-    "id": "railscasts",
-    "name": "Railscasts"
+    "id": "russian",
+    "name": "Russian"
   },
   {
-    "id": "tomorrow",
-    "name": "Tomorrow"
+    "id": "spanish",
+    "name": "Spanish"
   },
   {
-    "id": "twilight",
-    "name": "Twilight"
+    "id": "swedish",
+    "name": "Swedish"
   }
 ]
