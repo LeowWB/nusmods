@@ -21,7 +21,7 @@ export default function ThemeOption(props: Props) {
   return (
     <button
       type="button"
-      className={classnames(className, styles.option, `theme-${theme.id}, ${mode == 'LIGHT' ? '' : 'mode-dark,'}`, {
+      className={classnames(className, styles.option, `theme-${theme.id} ${mode == 'LIGHT' ? '' : 'mode-dark'}`, {
         [styles.isSelected]: isSelected,
       })}
       onClick={() => onSelectTheme(theme.id)}
